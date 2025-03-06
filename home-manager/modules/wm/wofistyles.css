@@ -1,0 +1,50 @@
+window {
+    margin: 0px;
+    border-radius: 8px;
+    border: 2px solid;
+    border-color: rgba(156, 71, 212, 0.781);
+    background-color: #282828;
+    font-family: "JetBrains Mono";
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px;
+  }
+  
+  #input {
+    margin: 5px;
+    border: none;
+    color: #ebdbb2;
+    background-color: #1d2021;
+  }
+  
+  #inner-box {
+    margin: 5px;
+    border: none;
+    background-color: #282828;
+  }
+  
+  #outer-box {
+    margin: 5px;
+    border: none;
+    background-color: #282828;
+  }
+  
+  #scroll {
+    margin: 0px;
+    border: none;
+  }
+  
+  #text {
+    margin: 5px;
+    border: none;
+    color: #ebdbb2;
+  }
+  #entry {
+    padding:2px;
+  }
+
+  #entry:selected {
+    background-color: rgba(156, 71, 212, 0.781);
+    border-radius:8px;
+    color: #ffffff;
+  }
