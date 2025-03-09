@@ -3,8 +3,8 @@
         enable = true;
 
         settings = {
-            font_family = "jetbrains mono nerd font";
-            font_size = 12;
+            font_family = "JetBrains Mono Nerd Font";
+            font_size = 11;
             bold_font = "auto";
             italic_font = "auto";
             bold_italic_font = "auto";

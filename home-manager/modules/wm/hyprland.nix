@@ -10,7 +10,7 @@
             "$menu" = "wofi --show drun";
 
             exec-once = [
-                "brave"
+                "$terminal"
                 "nm-applet &"
                 "waybar & hyprpaper"
             ];
@@ -119,16 +119,16 @@
                 "$mainMod, 9, workspace, 9"
                 "$mainMod, 0, workspace, 10"
 
-                "$mainMod SHIFT, 1, movetoworkspace, 1,"
-                "$mainMod SHIFT, 2, movetoworkspace, 2,"
-                "$mainMod SHIFT, 3, movetoworkspace, 3,"
-                "$mainMod SHIFT, 4, movetoworkspace, 4,"
-                "$mainMod SHIFT, 5, movetoworkspace, 5,"
-                "$mainMod SHIFT, 6, movetoworkspace, 6,"
-                "$mainMod SHIFT, 7, movetoworkspace, 7,"
-                "$mainMod SHIFT, 8, movetoworkspace, 8,"
-                "$mainMod SHIFT, 9, movetoworkspace, 9,"
-                "$mainMod SHIFT, 0, movetoworkspace, 10,"
+                "$mainMod SHIFT, 1, movetoworkspace, 1"
+                "$mainMod SHIFT, 2, movetoworkspace, 2"
+                "$mainMod SHIFT, 3, movetoworkspace, 3"
+                "$mainMod SHIFT, 4, movetoworkspace, 4"
+                "$mainMod SHIFT, 5, movetoworkspace, 5"
+                "$mainMod SHIFT, 6, movetoworkspace, 6"
+                "$mainMod SHIFT, 7, movetoworkspace, 7"
+                "$mainMod SHIFT, 8, movetoworkspace, 8"
+                "$mainMod SHIFT, 9, movetoworkspace, 9"
+                "$mainMod SHIFT, 0, movetoworkspace, 10"
             
                 "$mainMod, S, togglespecialworkspace, magic,"
                 "$mainMod SHIFT, S, movetoworkspace, sepcial:magic"
@@ -153,16 +153,16 @@
                 ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
             ];
 
-            #bindl = [
-            #    ", XF86AudioNext, exec, playerctl next"
-            #    ", XF86AudioPause, exec, playerctl play-pause"
-            #    ", XF86AudioPlay, exec, playerctl play-pause"
-            #    ", XF86AudioPrev, exec, playerctl previous"
-            #];
+            bindl = [
+                ", XF86AudioNext, exec, playerctl next"
+                ", XF86AudioPause, exec, playerctl play-pause"
+                ", XF86AudioPlay, exec, playerctl play-pause"
+                ", XF86AudioPrev, exec, playerctl previous"
+            ];
 
             
 
-            # Ignore maximize requests from apps. You'll probably like this.
+            # Ignore maximize requests from apps.
             windowrulev2 =[
                 "suppressevent maximize, class:.*"
                 "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
