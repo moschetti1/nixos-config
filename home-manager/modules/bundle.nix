@@ -9,5 +9,8 @@ imports = [
   ./ohmyposh.nix
   ./kitty.nix
   ./bash.nix
+  ./zsh.nix
+  ./zellij.nix
+  ./zed.nix
 ];
 }

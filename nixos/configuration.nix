@@ -42,8 +42,23 @@
 
 
 
-
-
+  #Enable zsh
+  users.defaultUserShell = pkgs.zsh;
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+    ohMyZsh = {
+      enable = true;
+      theme = "robbyrussell";
+      
+    };
+  };
+  environment.shells = with pkgs; [ zsh ];
+  environment.variables = {
+    SHELL = "${pkgs.zsh}/bin/zsh";
+  };
 
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true;
@@ -118,6 +133,7 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.francisco = {
+    shell = pkgs.zsh;
     isNormalUser = true;
     description = "francisco";
     extraGroups = [ "networkmanager" "wheel" ];

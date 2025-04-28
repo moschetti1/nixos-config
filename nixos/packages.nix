@@ -14,10 +14,12 @@
      vscode
      obs-studio
      vlc
-
+     zed-editor
+     libresprite
      #home-manager
      home-manager
      #cli stuff
+     zsh
      kitty
      oh-my-posh
      neovim
@@ -25,6 +27,11 @@
      btop
      git
      tmux
+     zellij
+     flyctl 
+     ffmpeg
+     wrangler
+          
      #hyprland things
      hyprpaper
      hyprcursor
@@ -54,8 +61,8 @@
     font-awesome
     powerline-fonts
     powerline-symbols
-    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" ]; })
-  ];
+    (nerdfonts.override { fonts = [ "NerdFontsSymbolsOnly" "IBMPlexMono" ]; })
+ ];
 
 
 }

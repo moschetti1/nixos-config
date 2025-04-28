@@ -23,7 +23,7 @@
                 gaps_in = 5;
                 gaps_out = 20;
                 border_size = 2;
-                "col.active_border" = "rgba(6b21a8aa) rgba(f97316aa) 15deg";
+                "col.active_border" = "rgba(ffffffaa)";
                 "col.inactive_border" = "rgba(595959aa)";
                 layout = "dwindle";
                 resize_on_border = false;
@@ -129,7 +129,7 @@
                 "$mainMod SHIFT, 8, movetoworkspace, 8"
                 "$mainMod SHIFT, 9, movetoworkspace, 9"
                 "$mainMod SHIFT, 0, movetoworkspace, 10"
-            
+
                 "$mainMod, S, togglespecialworkspace, magic,"
                 "$mainMod SHIFT, S, movetoworkspace, sepcial:magic"
 
@@ -160,12 +160,15 @@
                 ", XF86AudioPrev, exec, playerctl previous"
             ];
 
-            
+
 
             # Ignore maximize requests from apps.
-            windowrulev2 =[
-                "suppressevent maximize, class:.*"
-                "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+            #windowrulev2 =[
+            #    "suppressevent maximize, class:.*"
+            #    "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
+            #];
+            windowrule = [
+              "opacity 0.55 0.55, title:(.*)(Zed)$"
             ];
 
         };
