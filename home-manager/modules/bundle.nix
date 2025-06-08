@@ -12,5 +12,6 @@ imports = [
   ./zsh.nix
   ./zellij.nix
   ./zed.nix
+  ./helix.nix
 ];
 }

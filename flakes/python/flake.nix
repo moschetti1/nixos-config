@@ -1,3 +1,4 @@
+
 {
     inputs = {
         nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -12,12 +13,17 @@
         {
             devShells.${system}.default = pkgs.mkShell { 
                 packages = [
-                    pkgs.nodejs 
-                    pkgs.turso-cli 
-                    pkgs.sqld
-                    pkgs.typescript-language-server
-                    pkgs.svelte-language-server
+                    pkgs.uv
+                    pkgs.pyright
+                    pkgs.python313Packages.django-stubs
+                    pkgs.python313Packages.ruff
                 ];
-	    };
-        };
+
+                env.LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath [
+                  pkgs.stdenv.cc.cc.lib
+                  pkgs.libz
+                ];
+               
+	          };
+       };
 }
